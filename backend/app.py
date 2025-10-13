@@ -693,12 +693,14 @@ def get_data_info():
         logger.info(f"Info endpoint - Datetime columns found: {datetime_cols}")
         logger.info(f"Info endpoint - Categorical columns found: {categorical_cols}")
         
-        # Statistics
+        # Statistics - structure for direct frontend access
         stats = {}
         
         # Numeric statistics
         if numeric_cols:
-            stats['numeric'] = current_data[numeric_cols].describe().to_dict()
+            # Get the describe() results and add them directly to stats (not nested)
+            numeric_stats = current_data[numeric_cols].describe().to_dict()
+            stats.update(numeric_stats)
         
         # Datetime statistics
         datetime_stats = {}
