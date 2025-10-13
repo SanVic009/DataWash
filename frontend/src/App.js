@@ -110,7 +110,7 @@ function App() {
     <div className="App">
       <header className="app-header">
         <div className="header-content">
-          <h1>📊 Data Cleaning Pro</h1>
+          <h1>📊 Data Wash</h1>
           <p>Professional Data Analysis & Cleaning Tool</p>
         </div>
       </header>
@@ -278,7 +278,7 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        <p>© 2025 Data Cleaning Pro - Professional Data Analysis Tool</p>
+        <p>© 2025 Data Wash - Professional Data Analysis Tool</p>
       </footer>
     </div>
   );

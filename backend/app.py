@@ -2954,7 +2954,7 @@ def track_operation(operation_type, description, details=None):
 
 if __name__ == '__main__':
     # Setup logging for server startup
-    logger.info("=== STARTING DATA CLEANING APPLICATION SERVER ===")
+    logger.info("=== STARTING DATA WASH APPLICATION SERVER ===")
     logger.info(f"Upload folder: {UPLOAD_FOLDER}")
     logger.info(f"Max file size: {app.config['MAX_CONTENT_LENGTH'] / (1024*1024)} MB")
     logger.info(f"Allowed file extensions: {ALLOWED_EXTENSIONS}")

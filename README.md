@@ -1,6 +1,6 @@
-# Data Cleaning Pro 📊
+# Data Wash
 
-A professional data cleaning and analysis tool with Python Flask backend and React frontend.
+Data Wash - A professional data cleaning and analysis tool with Python Flask backend and React frontend.
 
 ## Features
 
