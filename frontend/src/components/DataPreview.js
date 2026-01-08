@@ -36,7 +36,7 @@ const DataPreview = ({ fileInfo, onDataLoad }) => {
     try {
       setLoading(true);
       setError(null);
-      const response = await axios.get('http://localhost:5000/api/preview');
+      const response = await axios.get('http://localhost:5001/api/preview');
       
       if (response.data && response.data.data && response.data.columns) {
         setPreviewData(response.data);
@@ -63,7 +63,7 @@ const DataPreview = ({ fileInfo, onDataLoad }) => {
     try {
       setLoading(true);
       setError(null);
-      const response = await axios.get('http://localhost:5000/api/data');
+      const response = await axios.get('http://localhost:5001/api/data');
       
       if (response.data && response.data.data && response.data.columns) {
         setFullData(response.data);

@@ -21,7 +21,7 @@ const DataValidation = ({ filename, onDataUpdate }) => {
     setError('');
     
     try {
-      const response = await axios.post('http://localhost:5000/api/analyze-data-integrity');
+      const response = await axios.post('http://localhost:5001/api/analyze-data-integrity');
       setValidationData(response.data);
     } catch (error) {
       setError(error.response?.data?.error || 'Error analyzing data integrity');
@@ -52,7 +52,7 @@ const DataValidation = ({ filename, onDataUpdate }) => {
         payload.replacement_value = replacementValue;
       }
 
-      const response = await axios.post('http://localhost:5000/api/fix-data-integrity', payload);
+      const response = await axios.post('http://localhost:5001/api/fix-data-integrity', payload);
 
       setSuccess(response.data.message);
       

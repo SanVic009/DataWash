@@ -20,7 +20,7 @@ const MissingValueImputation = ({ fileInfo, onDataUpdate }) => {
 
   const loadMissingValueInfo = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/info');
+      const response = await axios.get('http://localhost:5001/api/info');
       setDataInfo(response.data);
       
       // Extract columns with missing values
@@ -99,7 +99,7 @@ const MissingValueImputation = ({ fileInfo, onDataUpdate }) => {
       setError(null);
       setSuccess(false);
       
-      const response = await axios.post('http://localhost:5000/api/impute-missing', {
+      const response = await axios.post('http://localhost:5001/api/impute-missing', {
         rules: validRules
       });
       

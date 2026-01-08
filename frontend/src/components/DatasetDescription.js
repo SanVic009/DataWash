@@ -24,7 +24,7 @@ const DatasetDescription = ({ fileInfo }) => {
       setLoading(true);
       setError(null);
       
-      const response = await axios.post('http://localhost:5000/api/column-analysis', {
+      const response = await axios.post('http://localhost:5001/api/column-analysis', {
         column: columnName
       });
       

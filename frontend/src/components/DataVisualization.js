@@ -39,7 +39,7 @@ const DataVisualization = ({ fileInfo }) => {
 
   const getValidYColumns = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/api/valid-y-columns', {
+      const response = await axios.post('http://localhost:5001/api/valid-y-columns', {
         x_axis: xAxis
       });
       setValidYColumns(response.data.valid_columns);
@@ -58,7 +58,7 @@ const DataVisualization = ({ fileInfo }) => {
     if (!xAxis && !yAxis) return;
 
     try {
-      const response = await axios.post('http://localhost:5000/api/plot-options', {
+      const response = await axios.post('http://localhost:5001/api/plot-options', {
         x_axis: xAxis,
         y_axis: yAxis
       });
@@ -86,7 +86,7 @@ const DataVisualization = ({ fileInfo }) => {
         setTimeout(() => reject(new Error('Plot generation is taking longer than expected. Please wait...')), 15000)
       );
       
-      const plotPromise = axios.post('http://localhost:5000/api/plot', {
+      const plotPromise = axios.post('http://localhost:5001/api/plot', {
         x_axis: xAxis,
         y_axis: yAxis,
         plot_type: plotType
@@ -121,7 +121,7 @@ const DataVisualization = ({ fileInfo }) => {
         setTimeout(() => reject(new Error('Correlation calculation is taking longer than expected...')), 20000)
       );
       
-      const correlationPromise = axios.get('http://localhost:5000/api/correlation');
+      const correlationPromise = axios.get('http://localhost:5001/api/correlation');
 
       try {
         const response = await Promise.race([correlationPromise, timeoutPromise]);

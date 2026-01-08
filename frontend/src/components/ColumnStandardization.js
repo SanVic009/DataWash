@@ -140,7 +140,7 @@ const ColumnStandardization = ({ fileInfo, onDataUpdate }) => {
         return;
       }
       
-      const response = await axios.post('http://localhost:5000/api/standardize-columns', {
+      const response = await axios.post('http://localhost:5001/api/standardize-columns', {
         column_mapping: columnMapping,
         data_standardization: dataStandardization
       });

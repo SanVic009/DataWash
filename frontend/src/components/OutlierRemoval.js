@@ -19,7 +19,7 @@ const OutlierRemoval = ({ fileInfo, onDataUpdate }) => {
 
   const loadDataInfo = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/info');
+      const response = await axios.get('http://localhost:5001/api/info');
       setNumericColumns(response.data.numeric_columns || []);
     } catch (err) {
       console.error('Error loading data info:', err);
@@ -78,7 +78,7 @@ const OutlierRemoval = ({ fileInfo, onDataUpdate }) => {
       setLoading(true);
       setError(null);
       
-      const response = await axios.post('http://localhost:5000/api/detect-outliers', {
+      const response = await axios.post('http://localhost:5001/api/detect-outliers', {
         columns: numericColumns
       });
       
@@ -106,7 +106,7 @@ const OutlierRemoval = ({ fileInfo, onDataUpdate }) => {
       setError(null);
       setSuccess(false);
       
-      const response = await axios.post('http://localhost:5000/api/remove-outliers', {
+      const response = await axios.post('http://localhost:5001/api/remove-outliers', {
         rules: validRules
       });
       

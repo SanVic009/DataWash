@@ -2963,8 +2963,8 @@ if __name__ == '__main__':
     os.makedirs(UPLOAD_FOLDER, exist_ok=True)
     logger.info(f"Upload directory created/verified: {os.path.abspath(UPLOAD_FOLDER)}")
     
-    logger.info("Starting Flask server on http://127.0.0.1:5000")
+    logger.info("Starting Flask server on http://127.0.0.1:5001")
     logger.info("Server ready to accept file uploads!")
     logger.info("=" * 50)
     
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=5001)
