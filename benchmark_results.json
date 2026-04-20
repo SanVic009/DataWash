@@ -1,0 +1,293 @@
+{
+  "timestamp": "2026-02-27T17:06:51.078226",
+  "tests": [
+    {
+      "dataset": "diabetes.csv",
+      "size": "23KB",
+      "rows": 767,
+      "operations": {
+        "load_csv": {
+          "time_ms": 1.3
+        },
+        "datetime_detection": {
+          "time_ms": 0.2
+        },
+        "statistics": {
+          "time_ms": 8.0
+        },
+        "correlation": {
+          "time_ms": 0.3
+        },
+        "outlier_zscore": {
+          "time_ms": 0.4,
+          "outliers": 4
+        },
+        "outlier_iqr": {
+          "time_ms": 0.8,
+          "outliers": 4
+        },
+        "outlier_isolation_forest": {
+          "time_ms": 92.5,
+          "outliers": 58
+        },
+        "remove_duplicates": {
+          "time_ms": 0.9,
+          "removed": 0
+        },
+        "drop_column": {
+          "time_ms": 0.4
+        },
+        "skewness": {
+          "time_ms": 0.7
+        },
+        "kurtosis": {
+          "time_ms": 0.5
+        },
+        "plot_scatter": {
+          "time_ms": 0.5,
+          "points": 768
+        },
+        "plot_histogram": {
+          "time_ms": 0.0,
+          "points": 768
+        }
+      }
+    },
+    {
+      "dataset": "Titanic-Dataset.csv",
+      "size": "59KB",
+      "rows": 891,
+      "operations": {
+        "load_csv": {
+          "time_ms": 1.7
+        },
+        "datetime_detection": {
+          "time_ms": 0.2
+        },
+        "statistics": {
+          "time_ms": 5.5
+        },
+        "correlation": {
+          "time_ms": 0.3
+        },
+        "outlier_zscore": {
+          "time_ms": 0.3,
+          "outliers": 0
+        },
+        "outlier_iqr": {
+          "time_ms": 0.8,
+          "outliers": 0
+        },
+        "outlier_isolation_forest": {
+          "time_ms": 95.8,
+          "outliers": 89
+        },
+        "impute_mean": {
+          "time_ms": 0.2
+        },
+        "impute_median": {
+          "time_ms": 0.3
+        },
+        "impute_mode": {
+          "time_ms": 0.3
+        },
+        "remove_duplicates": {
+          "time_ms": 1.1,
+          "removed": 0
+        },
+        "drop_column": {
+          "time_ms": 0.3
+        },
+        "label_encode": {
+          "time_ms": 0.3
+        },
+        "one_hot_encode": {
+          "time_ms": 2.4
+        },
+        "skewness": {
+          "time_ms": 0.6
+        },
+        "kurtosis": {
+          "time_ms": 0.5
+        },
+        "plot_scatter": {
+          "time_ms": 0.4,
+          "points": 891
+        },
+        "plot_histogram": {
+          "time_ms": 0.0,
+          "points": 891
+        },
+        "plot_box": {
+          "time_ms": 0.4,
+          "points": 891
+        }
+      }
+    },
+    {
+      "dataset": "users.csv",
+      "size": "604KB",
+      "rows": 10000,
+      "operations": {
+        "load_csv": {
+          "time_ms": 8.6
+        },
+        "datetime_detection": {
+          "time_ms": 0.2
+        },
+        "statistics": {
+          "time_ms": 1.5
+        },
+        "outlier_zscore": {
+          "time_ms": 0.4,
+          "outliers": 106
+        },
+        "outlier_iqr": {
+          "time_ms": 1.0,
+          "outliers": 202
+        },
+        "outlier_isolation_forest": {
+          "time_ms": 169.7,
+          "outliers": 905
+        },
+        "remove_duplicates": {
+          "time_ms": 6.0,
+          "removed": 0
+        },
+        "drop_column": {
+          "time_ms": 0.4
+        },
+        "label_encode": {
+          "time_ms": 1.1
+        },
+        "one_hot_encode": {
+          "time_ms": 64.7
+        },
+        "skewness": {
+          "time_ms": 0.8
+        },
+        "kurtosis": {
+          "time_ms": 0.8
+        }
+      }
+    },
+    {
+      "dataset": "emails.csv",
+      "size": "8.6MB",
+      "rows": 5728,
+      "operations": {
+        "load_csv": {
+          "time_ms": 43.9
+        },
+        "datetime_detection": {
+          "time_ms": 0.1
+        },
+        "statistics": {
+          "time_ms": 1.4
+        },
+        "outlier_zscore": {
+          "time_ms": 0.4,
+          "outliers": 0
+        },
+        "outlier_iqr": {
+          "time_ms": 0.8,
+          "outliers": 1368
+        },
+        "outlier_isolation_forest": {
+          "time_ms": 97.1,
+          "outliers": 0
+        },
+        "remove_duplicates": {
+          "time_ms": 14.2,
+          "removed": 33
+        },
+        "drop_column": {
+          "time_ms": 0.3
+        },
+        "label_encode": {
+          "time_ms": 14.1
+        },
+        "one_hot_encode": {
+          "time_ms": 40.9
+        },
+        "skewness": {
+          "time_ms": 0.7
+        },
+        "kurtosis": {
+          "time_ms": 0.5
+        }
+      }
+    },
+    {
+      "dataset": "ncr_ride_bookings.csv",
+      "size": "25MB",
+      "rows": 150000,
+      "operations": {
+        "load_csv": {
+          "time_ms": 315.0
+        },
+        "datetime_detection": {
+          "time_ms": 0.4
+        },
+        "statistics": {
+          "time_ms": 52.4
+        },
+        "correlation": {
+          "time_ms": 24.7
+        },
+        "outlier_zscore": {
+          "time_ms": 2.4,
+          "outliers": 200
+        },
+        "outlier_iqr": {
+          "time_ms": 4.4,
+          "outliers": 0
+        },
+        "outlier_isolation_forest": {
+          "time_ms": 1258.4,
+          "outliers": 13190
+        },
+        "impute_mean": {
+          "time_ms": 1.0
+        },
+        "impute_median": {
+          "time_ms": 3.0
+        },
+        "impute_mode": {
+          "time_ms": 2.4
+        },
+        "remove_duplicates": {
+          "time_ms": 122.8,
+          "removed": 0
+        },
+        "drop_column": {
+          "time_ms": 0.5
+        },
+        "label_encode": {
+          "time_ms": 14.4
+        },
+        "one_hot_encode": {
+          "time_ms": 46.9
+        },
+        "skewness": {
+          "time_ms": 2.4
+        },
+        "kurtosis": {
+          "time_ms": 1.9
+        },
+        "plot_scatter": {
+          "time_ms": 1.7,
+          "points": 102000
+        },
+        "plot_histogram": {
+          "time_ms": 0.7,
+          "points": 139500
+        },
+        "plot_box": {
+          "time_ms": 6.7,
+          "points": 139500
+        }
+      }
+    }
+  ]
+}
